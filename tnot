@@ -1,0 +1,6 @@
+#!/bin/sh
+XTERM=${XTERM:-st}
+name=${1:-$(gpg --armor --gen-random 2 5 | sed 's/[^a-zA-Z]//')}
+
+
+st -e abduco -A "tnot-$name" mtm
